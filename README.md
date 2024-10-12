@@ -17,7 +17,7 @@ page.click(".semi-select-option", anchortype);
 if(anchortype == '位置' && position){
     page.click(".semi-select", '输入地理位置');
     page.inputAfterEnter("div[class*='anchor-item-'] input", position);
-    await SVM_sleep(2000);
+    await page.sleep(2000);
     page.click("div[class*='option-v2-']", position);
 
 }else{
@@ -46,7 +46,7 @@ if(document.querySelector(".semi-cascader")){
 if(hotspot){
     page.click(".semi-select-selection-text", '点击输入热点词');
     page.inputAfterEnter(".container--nsGe1 input", '${hotspot_name}');
-    await SVM_sleep(2000);
+    await page.sleep(2000);
     page.click(".semi-select-option", '${hotspot_name}');
 }
 
